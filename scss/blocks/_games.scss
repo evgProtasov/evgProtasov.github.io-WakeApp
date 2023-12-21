@@ -1,0 +1,219 @@
+.games {
+    margin-bottom: 74px;
+    &-name {
+        margin-bottom: 24px;
+    }
+
+    &-title {
+        font-size: 36px;
+        font-weight: 700;
+        
+    }
+
+    &-text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-wrapper {
+        display: flex;
+        margin-bottom: 24px;
+        gap: 16px;
+    }
+
+    &-block {
+
+        &_left {
+            display: grid;
+            grid-template-columns: repeat(3, 160px);
+            grid-auto-rows: minmax(160px, auto);
+            gap: 16px;
+        }
+
+        &_right {
+            display: grid;
+            grid-template-columns: repeat(2, 248px);
+            grid-auto-rows: minmax(160px, auto);
+            gap: 16px;
+        }
+    }
+
+    &-warning {
+        max-width: 655px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 74px;
+    }
+}
+
+.text {
+
+    &-title {
+        font-size: 16px;
+        font-weight: 400;
+        
+    }
+
+    &-allgames {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.game-item {
+    transition: .5s;
+    cursor: pointer;
+
+    &__right {
+        position: relative;
+    }
+
+    &_image {        
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 6px;
+    }
+
+    &_name {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &_studia {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    &_text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.game-item.game-banner .game-item_text .text-wrapper .text_name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.game-item.game-banner .game-item_text .text-wrapper .text_content {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.game-item.game-banner .game-item_text .text_button {
+    max-width: 81px;
+    color: #fff;
+    align-self: center;
+}
+
+
+.text {
+
+    &_name {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    &_content {
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        text-align: left;     
+    }
+    &_button {
+        max-width: 68px;
+        width: 100%;
+        padding: 5px 0;
+        text-align: center;
+        background-color: #4870FF;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: 600;
+        display: inline-block;
+    }
+    &-allgames {
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
+    }
+}
+
+.game-banner {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.game-item.game-item__left .game-item_image {
+    width: 160px;
+    height: 120px;
+}
+.game-item.game-item__left .game-item_image img {
+    height: 100%;
+    width: 100%;
+}
+
+.game-item.game-item__right .game-item_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 248px;
+    min-height: 160px;
+}
+.game-item.game-item__right .game-item_image img {
+    height: 100%;
+    width: 100%;
+}
+.game-item.game-item__right .game-item_text {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 150px;
+    padding: 16px 0px 16px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.game-item.game-banner .game-item_image {
+    max-width: 512px;
+    height: 120px;
+}
+.game-item.game-banner .game-item_image img {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 1060px) {
+    .games {
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+        &-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-warning {
+            text-align: center;
+            align-self: center;
+        }
+    }
+
+}
+
+@media (max-width: 530px) {
+    .games-block_left {
+        grid-template-columns: repeat(2, 160px);
+    }
+    .games-block_right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .game-item.game-item__right .game-item_image {
+        width: auto;
+    }
+}

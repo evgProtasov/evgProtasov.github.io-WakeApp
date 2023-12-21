@@ -1,0 +1,131 @@
+@import './_fonts.scss';
+@import './_reset.scss';
+@import './_variables.scss';
+@import './blocks/header';
+@import './blocks/games';
+@import './blocks/_contact';
+@import './blocks//_footer';
+@import './preloader';
+
+body {
+    color: $textMain;
+    background-color: #01011F;
+}
+
+.container {
+    max-width: 1060px;
+    width: 100%;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.item-active {
+    background: linear-gradient(265.48deg, #4870FF -5.06%, #FA00FF 94.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    & a + span {
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(265.48deg, #4870FF -5.06%, #FA00FF 94.87%);
+        box-shadow: 0px 4px 16px 0px rgba(138, 97, 255, 0.6);
+        border-radius: 4px 4px 0 0;
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+    }
+}
+
+.popup.none {
+    display: none;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(1, 1, 31, 0.843);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    // opacity: .9;
+
+    &-container {
+        max-width: 500px;
+        width: 100%;
+        min-height: 300px;
+        background-color: rgba(162, 0, 255, 0.9);
+        border-radius: 30px;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &-close {
+        align-self: flex-end;
+        cursor: pointer;
+        width: 1em;
+        height: 1em;
+        background-color: rgb(255, 255, 255);
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);        
+    }
+    &-title {
+        font-size: 24px;
+    }
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        & input {
+            padding: 10px 15px;
+            background-color: #FFFFFF;
+            color: #4870FF;
+            width: 70%;
+            border-radius: 8px;
+        }
+        & button {
+            padding: 10px 12px;
+            max-width: 100px;
+            border-radius: 8px;
+            border: 1px solid #FFFFFF;
+        }
+    }
+}
+
+@media (hover:hover) {
+    .header-nav nav ul li a:hover {
+        background: linear-gradient(265.48deg, #4870FF -5.06%, #FA00FF 94.87%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+    .reg-login.button:hover {
+        box-shadow: 0px 4px 16px 0px rgba(138, 97, 255, 0.6);
+    }
+    .button.button-color:hover {
+        box-shadow: 0px 4px 16px 0px rgba(138, 97, 255, 0.6);
+    }
+    .form-body button:hover {
+        box-shadow: 0px 4px 16px 0px rgba(138, 97, 255, 0.6);
+    }
+    .policy-button:hover {
+        box-shadow: 0px 4px 16px 0px #8A61FF99;
+    }
+    .footer-top_links a:hover {
+        background: linear-gradient(265.48deg, #4870FF -5.06%, #FA00FF 94.87%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .game-item:hover .game-item_name {
+        color: #4870FF;
+    }
+    .game-item:hover.game-banner .game-item_text .text-wrapper .text_name {
+        color: #4870FF;
+    }
+}
